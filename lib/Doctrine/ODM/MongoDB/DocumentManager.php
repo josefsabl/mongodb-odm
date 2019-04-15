@@ -776,7 +776,7 @@ class DocumentManager implements ObjectManager
             $discriminatorValue = $class->discriminatorValue;
         }
 
-        if ($discriminatorField !== null) {
+        if ($discriminatorField !== null && $discriminatorValue) {
             if ($discriminatorValue === null) {
                 throw MappingException::unlistedClassInDiscriminatorMap($class->name);
             }
